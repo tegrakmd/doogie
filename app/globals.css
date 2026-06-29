@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  --base-100: #fff;
+  --base-200: #2a2a2a;
+  --base-300: #1f1f1f;
+  --base-400: #0f0f0f;
+  --base-500: #fb4016;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Courier New", Courier, monospace;
+}
