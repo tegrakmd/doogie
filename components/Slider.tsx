@@ -9,11 +9,11 @@ import type { SlideData } from "@/types/slide";
 gsap.registerPlugin(SplitText);
 
 const slideData: SlideData[] = [
-  { title: "Safari Vizuri", image: "/images/1.png" },
-  { title: "Mwezi Partners", image: "/images/2.jpg" },
   { title: "Portfolio Tegra", image: "/images/3.png" },
+  { title: "Mwezi Partners", image: "/images/2.jpg" },
+  { title: "Safari Vizuri ", image: "/images/1.png" },
   { title: "Recod Dance", image: "/images/4.png" },
-  { title: "Karibu here", image: "/images/5.jpg" },
+  { title: "Karibu Here", image: "/images/5.jpg" },
 ];
 
 type Direction = "down" | "up";
@@ -33,6 +33,7 @@ const TEXT_ANIM = {
 } as const;
 
 export default function Slider() {
+  
   const containerRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -200,6 +201,7 @@ export default function Slider() {
     }
 
     function handleScrollUp() {
+
       const slides = getSlides();
       const lastSlide = slides[slides.length - 1];
 
@@ -210,6 +212,7 @@ export default function Slider() {
       const newTitle = newSlide.querySelector<HTMLElement>(`.${styles.slideTitle}`)!;
 
       slider!.prepend(newSlide);
+
       const newSplit = splitTitle(newTitle);
       const outgoingSplit = getTitleSplit(lastSlide);
 
